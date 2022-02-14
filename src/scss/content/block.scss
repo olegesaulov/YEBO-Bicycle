@@ -1,0 +1,23 @@
+.block {
+    text-align: center;
+
+    &__icon {
+        margin: 0px 0px 33px 0px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 3.6px;
+        color: $gray;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 2;
+        color: $gray-2;
+    }
+}
