@@ -19,5 +19,30 @@
         font-size: 18px;
         line-height: 2;
         color: $gray-2;
+
+        &--justify {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 30px;
+
+            &::after {
+                content: "";
+                display: block;
+                margin: 40px auto 0 auto;
+                width: 50px;
+                height: 1px;
+                background-color: $gray-4;
+            }
+        }
+    }
+
+    @media (max-width: $xxl) {
+        &__text {
+            &--justify {
+                &::after {
+                    margin: 20px auto 0 auto;
+                }
+            }
+        }
     }
 }
