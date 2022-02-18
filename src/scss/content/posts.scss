@@ -6,6 +6,21 @@
 
     &__body {
     }
+
+    @media (max-width: $md) {
+        padding: 60px 0 30px 0;
+
+        .#{$carouselClassName} {
+            &__dot {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    @media (max-width: $sm) {
+        padding: 30px 0 20px 0;
+    }
 }
 
 .item-post {
