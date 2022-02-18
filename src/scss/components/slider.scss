@@ -1,0 +1,94 @@
+$carouselClassName: "slider";
+
+$carouselArrowColorActive: $gray-6;
+$carouselArrowColorDisabled: $gray-7;
+
+$carouselDotColorBackground: transparent;
+$carouselDotColorBorder: $gray-7;
+$carouselDotColorBackgroundActive: $gray-6;
+$carouselDotColorBorderActive: $gray-6;
+
+.#{$carouselClassName} {
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: 0;
+        height: 0;
+
+        padding: 10px;
+        border: solid $carouselArrowColorActive;
+        border-width: 0 10px 10px 0;
+
+        z-index: 1;
+        background: transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in;
+
+        &:disabled {
+            cursor: default;
+            border: solid $carouselArrowColorDisabled;
+            border-width: 0 10px 10px 0;
+        }
+    }
+
+    &__arrow--prev {
+        left: 15px;
+        transform: translateY(-50%) rotate(135deg);
+
+        &:not(:disabled):hover {
+            transform: translateY(-50%) rotate(135deg) scale(1.2);
+        }
+    }
+
+    &__arrow--next {
+        right: 15px;
+        transform: translateY(-50%) rotate(-45deg);
+
+        &:not(:disabled):hover {
+            transform: translateY(-50%) rotate(-45deg) scale(1.2);
+        }
+    }
+
+    &__dots {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: $carouselDotColorBackground;
+        border: 1px solid $carouselDotColorBorder;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+
+        &--active {
+            background-color: $carouselDotColorBackgroundActive;
+            border: 1px solid $carouselDotColorBorderActive;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        position: relative;
+
+        &:hover {
+            .#{$carouselClassName}__arrow {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        transition: all 0.2s;
+        touch-action: none;
+    }
+}
