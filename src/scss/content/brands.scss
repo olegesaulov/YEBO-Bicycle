@@ -1,18 +1,19 @@
 .brands {
-    &--rev {
-        .brands__col {
-            order: 1;
-
-            &--big {
-                order: 2;
-            }
-        }
-    }
-    &--last {
-    }
-
     &__row {
         display: flex;
+
+        &--rev {
+            .brands__col {
+                order: 1;
+
+                &--big {
+                    order: 2;
+                }
+            }
+        }
+
+        &--last {
+        }
     }
 
     &__col {
@@ -43,17 +44,6 @@
 
     &__content-image {
         padding: 0px 0px 37.5% 0px;
-        background: $gray no-repeat center/cover;
-
-        &--first {
-            background-image: url("@img/photos_top/photo2.jpg");
-        }
-        &--second {
-            background-image: url("@img/photos_top/photo4.jpg");
-        }
-        &--third {
-            background-image: url("@img/photos_top/photo6.jpg");
-        }
     }
 
     @media (max-width: $xxl) {
@@ -63,21 +53,22 @@
     }
 
     @media (max-width: $xl) {
-        &--last {
-            .brands__col {
-                &:nth-child(1) {
-                    order: 2;
-                }
-                &:nth-child(2) {
-                    order: 1;
-                }
-                &:nth-child(3) {
-                    order: 3;
-                }
-            }
-        }
         &__row {
             flex-direction: column;
+
+            &--last {
+                .brands__col {
+                    &:nth-child(1) {
+                        order: 2;
+                    }
+                    &:nth-child(2) {
+                        order: 1;
+                    }
+                    &:nth-child(3) {
+                        order: 3;
+                    }
+                }
+            }
         }
     }
 }
@@ -109,20 +100,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: $gray no-repeat center/cover;
-
-        &--first {
-            background-image: url("@img/photos_top/photo1.jpg");
-        }
-        &--second {
-            background-image: url("@img/photos_top/photo3.jpg");
-        }
-        &--third {
-            background-image: url("@img/photos_top/photo5.jpg");
-        }
-        &--fourth {
-            background-image: url("@img/photos_top/photo7.jpg");
-        }
     }
 
     &:hover {

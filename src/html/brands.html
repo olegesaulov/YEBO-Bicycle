@@ -1,83 +1,76 @@
-<section class="brands">
+<div class="brands">
+
     <div class="brands__row">
         <div class="brands__col brands__col--big">
-            <a href="#" class="brands__item item-brand">
-                <span class="item-brand__logo">
-                    <img src="@img/brands/logo1.png" alt="logo">
-                </span>
-                <span class="item-brand__image item-brand__image--first"></span>
-            </a>
+            @@include('./item-brand.html', {
+                "className": "brands__item",
+                "logoSrc": "@img/brands/logo1.png",
+                "imgSrc": "@img/photos_top/photo1.jpg",
+            })
         </div>
         <div class="brands__col">
-            <div class="brands__content block">
-                <div class="block__icon">
-                    <img src="@img/block/block2.png" alt="icon">
-                </div>
-                <h2 class="block__title">vintage Oliva</h2>
-                <p class="block__text block__text--justify">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived.</p>
+            @@include('./block.html', {
+                "className": "brands__content",
+                "src": "@img/block/block2.png",
+                "title": "vintage Oliva",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.",
+                "isTextJustify": true,
+            })
+            <div class="brands__content-image ibg">
+                <img src="@img/photos_top/photo2.jpg" alt="image">
             </div>
-            <div class="brands__content-image brands__content-image--first"></div>
         </div>
     </div>
-</section>
-<section class="brands brands--rev">
-    <div class="brands__row">
+
+    <div class="brands__row brands__row--rev">
         <div class="brands__col brands__col--big">
-            <a href="#" class="brands__item item-brand">
-                <span class="item-brand__logo">
-                    <img src="@img/brands/logo2.png" alt="logo">
-                </span>
-                <span class="item-brand__image item-brand__image--second"></span>
-            </a>
+            @@include('./item-brand.html', {
+                "className": "brands__item",
+                "logoSrc": "@img/brands/logo2.png",
+                "imgSrc": "@img/photos_top/photo3.jpg",
+            })
         </div>
         <div class="brands__col">
-            <div class="brands__content block">
-                <div class="block__icon">
-                    <img src="@img/block/block3.png" alt="icon">
-                </div>
-                <h2 class="block__title">La Boriosa</h2>
-                <p class="block__text block__text--justify">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived.</p>
+            @@include('./block.html', {
+                "className": "brands__content",
+                "src": "@img/block/block3.png",
+                "title": "La Boriosa",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.",
+                "isTextJustify": true,
+            })
+            <div class="brands__content-image ibg">
+                <img src="@img/photos_top/photo4.jpg" alt="image">
             </div>
-            <div class="brands__content-image brands__content-image--second"></div>
         </div>
     </div>
-</section>
-<section class="brands brands--last">
-    <div class="brands__row">
+
+    <div class="brands__row brands__row--last">
         <div class="brands__col">
-            <a href="#" class="brands__item item-brand">
-                <span class="item-brand__logo">
-                    <img src="@img/brands/logo3.png" alt="logo">
-                </span>
-                <span class="item-brand__image item-brand__image--third"></span>
-            </a>
+            @@include('./item-brand.html', {
+                "className": "brands__item",
+                "logoSrc": "@img/brands/logo3.png",
+                "imgSrc": "@img/photos_top/photo5.jpg",
+            })
         </div>
         <div class="brands__col">
-            <div class="brands__content block">
-                <div class="block__icon">
-                    <img src="@img/block/block4.png" alt="icon">
-                </div>
-                <h2 class="block__title">retrò Bike - M. Hulot</h2>
-                <p class="block__text block__text--justify">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived.</p>
+            @@include('./block.html', {
+                "className": "brands__content",
+                "src": "@img/block/block4.png",
+                "title": "retrò Bike - M. Hulot",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.",
+                "isTextJustify": true,
+            })
+            <div class="brands__content-image ibg">
+                <img src="@img/photos_top/photo6.jpg" alt="image">
             </div>
-            <div class="brands__content-image brands__content-image--third"></div>
         </div>
         <div class="brands__col">
-            <a href="#" class="brands__item item-brand">
-                <span class="item-brand__logo">
-                    <img src="@img/brands/logo3.png" alt="logo">
-                </span>
-                <span class="item-brand__image item-brand__image--fourth"></span>
-            </a>
+            @@include('./item-brand.html', {
+                "className": "brands__item",
+                "logoSrc": "@img/brands/logo3.png",
+                "imgSrc": "@img/photos_top/photo7.jpg",
+            })
         </div>
     </div>
-</section>
+    
+</div>
