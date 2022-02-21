@@ -1,5 +1,5 @@
 .subscribe {
-    padding: 110px 30px;
+    padding: 110px 0;
 
     &__body {
         max-width: $sm;
@@ -29,11 +29,11 @@
     }
 
     @media (max-width: $md) {
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     @media (max-width: $sm) {
-        padding: 40px 20px;
+        padding: 40px 0;
 
         &__body {
             max-width: 100%;

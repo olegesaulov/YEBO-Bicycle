@@ -1,0 +1,133 @@
+.footer {
+    padding: 100px 0;
+
+    &__row {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        flex: 1 0 33.333%;
+    }
+
+    &__address {
+        font-size: 13.9px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 120%;
+        color: $gray-2;
+
+        p:first-child {
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+
+    &__social {
+    }
+
+    &__author {
+    }
+
+    @media (max-width: $xl) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: $md) {
+        padding: 30px 0;
+
+        &__col {
+            flex: 1 0 50%;
+        }
+
+        &__address-col {
+            order: 1;
+        }
+
+        &__social-col {
+            order: 3;
+        }
+
+        &__author-col {
+            order: 2;
+        }
+    }
+
+    @media (max-width: $sm) {
+        &__col {
+            flex: 1 0 100%;
+        }
+
+        &__address-col {
+            order: 1;
+        }
+
+        &__social-col {
+            order: 2;
+        }
+
+        &__author-col {
+            order: 3;
+        }
+
+        &__address {
+            text-align: center;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+
+    a:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    &__link {
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    @media (max-width: $md) {
+        padding: 30px 0 0 0;
+    }
+
+    @media (max-width: $sm) {
+        padding: 30px 0;
+    }
+}
+
+.author {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__text {
+        font-size: 13.9px;
+        line-height: 17px;
+        font-style: italic;
+        color: $gray-2;
+        margin-right: 10px;
+    }
+
+    &__logo {
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: $sm) {
+        justify-content: center;
+    }
+}
